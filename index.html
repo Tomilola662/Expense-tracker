@@ -4,6 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2 class="logo">FundFlex</h2>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main seciton -->
+    <main class="main-section">
+      <div class="transactions-section">
+        <h4>Transactions</h4>
+        <div class="t-boxes"></div>
+      </div>
+      <!-- inputsection -->
+      <div class="input-section">
+        <div class="current-balance">
+          <h3>Current Balance:</h3>
+          <p id="balance">$00.00</p>
+        </div>
+        <!-- <div class="entry-section"> -->
+        <div class="entry-input">
+          <h3>New Transaction</h3>
+
+          <form action="" id="transaction-form">
+            <div class="transaction-type">
+              <p>Transaction type</p>
+              <input type="radio" name="money" id="income-radio" required />
+              <label for="income-radio">Income</label>
+              <input type="radio" name="money" id="expenses-radio" required />
+              <label for="expenses-radio">Expenses</label>
+            </div>
+            <label for="">Description</label>
+            <input
+              type="text"
+              placeholder="Add a transaction  description"
+              id="description"
+              required
+            />
+            <label for="">Amount</label>
+            <input
+              type="number"
+              placeholder="Enter Amount"
+              id="amount"
+              required
+            />
+            <button type="submit">Add transaction</button>
+          </form>
+        </div>
+        <!-- balance and expenes -->
+        <div class="bal-ex">
+          <h3>Transaction Summary</h3>
+          <div class="bal">
+            <h3>Income</h3>
+            <p id="income">$00.00</p>
+          </div>
+          <div class="expenses">
+            <h3>Expenses</h3>
+            <p id="expenses">$00.00</p>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
