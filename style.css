@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", "Segoe UI";
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: blue; */
+  background-color: #211cb4;
+  color: azure;
+  align-items: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* main section */
+.main-section {
+  /* background-color: red; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+  padding: 2%;
+}
+
+.transactions-section {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  flex-basis: 30%;
+  padding: 2%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.input-section {
+  flex-basis: 70%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 20% auto;
+  column-gap: 10px;
+  flex-direction: column;
+}
+
+.transactions-section h4 {
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  background-color: #211cb4;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.transactions-section p,
+.transactions-section span {
+  font-size: 20px;
+}
+
+.t-boxes {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.t-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 2%;
+  border-radius: 5px;
+  color: #302d2d;
+  /* border: 4px solid #ddedfa; */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+.t-box div {
+  display: flex;
+  justify-content: space-between;
+}
+.time-box p {
+  font-size: 12px;
+}
+.time-box p {
+  display: none;
+}
+.t-box:hover .time-box p {
+  display: block;
+}
+.t-box:hover .time-box button {
+  display: block;
+}
+.t-box:hover .time-box {
+  border-top: 1px solid #aaa2a2;
+  padding-top: 5px;
+}
+
+/* input section */
+.current-balance {
+  grid-column: span 2;
+  font-size: 20px;
+  background-color: #ddedfa;
+  color: #211cb4;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-balance div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-balance p {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.current-balance h3 {
+  font-size: 35px;
+}
+.entry-input {
+  padding: 5% 7%;
+  /* background-color: #ddedfa; */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  border-radius: 0 0 10px 10px;
+}
+
+.entry-input h3 {
+  margin-bottom: 15px;
+  color: #211cb4;
+}
+
+.bal-ex {
+  padding: 2%;
+  background-color: #ddedfa;
+  border-radius: 0 0 10px 10px;
+  /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); */
+}
+
+.bal-ex > h4 {
+  margin-bottom: 20px;
+  color: #211cb4;
+}
+
+.bal,
+.expenses {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 0.5px;
+  /* border: 2px solid #211cb4; */
+}
+
+form button {
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  background-color: #211cb4;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+form label {
+  color: #3663ec;
+}
+
+.bal .bal1 {
+  background-color: #1ed31e;
+  color: white;
+}
+
+.expenses .exp1 {
+  background-color: red;
+  color: white;
+}
+.bal2,
+.exp2 {
+  background-color: #ddedfa;
+  color: #211cb4;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.transaction-type {
+  margin-bottom: 20px;
+}
+.transaction-type p {
+  margin-bottom: 10px;
+  color: #3663ec;
+  font-weight: 600;
+}
+
+.transaction-type input {
+  height: 15px;
+  width: 15px;
+}
+
+.transaction-type label {
+  margin-right: 20px;
+}
+
+/* amount styling */
+.red #amount-value {
+  color: red;
+}
+
+.green #amount-value {
+  color: green;
+}
+
+.delete-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.t-box button {
+  display: none;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-box {
+  display: none;
+}
+.transaction-btn {
+  background-color: white;
+  padding: 10px 25px;
+  color: #211cb4;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+#close-btn {
+  border: none;
+  background: none;
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  body {
+    height: 100vh;
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .input-section {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 90vh;
+    gap: 15px;
+    height: 100%;
+  }
+  .transactions-section {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    right: -100%;
+    box-shadow: none;
+    border-radius: 0;
+    height: 100vh;
+  }
+  .transaction-btn {
+    display: block;
+  }
+
+  .transactions-section h4 {
+    background: none;
+    color: #211cb4;
+    font-size: 20px;
+  }
+  .transactions-section p,
+  .transactions-section span {
+    font-size: 14px;
+  }
+  #close-btn {
+    display: block;
+    align-self: flex-start;
+  }
+  .show {
+    right: 0;
+    transition: right 0.5s ease-out;
+  }
+
+  .current-balance {
+    order: 1;
+    height: 200px;
+    border-radius: 5px;
+    padding: 5%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .current-balance div {
+    flex-direction: column;
+  }
+
+  .current-balance h3,
+  .current-balance p {
+    font-size: 30px;
+  }
+
+  .bal-ex {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 10px;
+    background: none;
+  }
+  .bal-ex h4 {
+    display: none;
+  }
+  .bal,
+  .expenses {
+    display: flex;
+    height: 50%;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    gap: 10px;
+  }
+
+  .expenses div,
+  .bal div {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font: 600;
+    border-radius: 30px;
+  }
+  .t-box:hover .time-box {
+  }
+  .time-box {
+    padding-top: 5px;
+  }
+  .time-box p {
+    font-size: 12px;
+  }
+}

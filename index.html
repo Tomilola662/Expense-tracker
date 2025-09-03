@@ -4,6 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2 class="logo"><a href="index.html">LEEMO</a></h2>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main seciton -->
+    <main class="main-section">
+      <div class="transactions-section">
+        <button id="close-btn">
+          <img src="X Logo Icon.png" alt="" height="30px" width="30px" />
+        </button>
+        <h4>Transactions</h4>
+        <div class="t-boxes"></div>
+      </div>
+      <!-- inputsection -->
+      <div class="input-section">
+        <div class="current-balance">
+          <div>
+            <h3>Current Balance:</h3>
+            <p id="balance">$00.00</p>
+          </div>
+          <div class="btn-box">
+            <button class="transaction-btn">All Transactions</button>
+          </div>
+        </div>
+        <!-- <div class="entry-section"> -->
+        <div class="entry-input">
+          <h3>New Transaction</h3>
+
+          <form action="" id="transaction-form">
+            <div class="transaction-type">
+              <p>Transaction type</p>
+              <input type="radio" name="money" id="income-radio" required />
+              <label for="income-radio">Income</label>
+              <input type="radio" name="money" id="expenses-radio" required />
+              <label for="expenses-radio">Expenses</label>
+            </div>
+            <label for="">Description</label>
+            <input
+              type="text"
+              placeholder="Add a transaction  description"
+              id="description"
+              required
+            />
+            <label for="">Amount</label>
+            <input
+              type="number"
+              placeholder="Enter Amount"
+              id="amount"
+              required
+            />
+            <button type="submit">Add transaction</button>
+          </form>
+        </div>
+        <!-- balance and expenes -->
+        <div class="bal-ex">
+          <h4>Transaction Summary</h4>
+          <div class="bal">
+            <div class="bal1"><h5>Income</h5></div>
+            <div class="bal2"><p id="income">$00.00</p></div>
+          </div>
+          <div class="expenses">
+            <div class="exp1"><h5>Expenses</h5></div>
+            <div class="exp2"><p id="expenses">$00.00</p></div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
