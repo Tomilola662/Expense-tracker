@@ -4,6 +4,10 @@ const formElement = document.getElementById("transaction-form");
 const radioOne = document.getElementById("income-radio");
 const radioTwo = document.getElementById("expenses-radio");
 const transactionContainer = document.querySelector(".t-boxes");
+//toggling transaction button
+const transactionBtn = document.querySelector(".transaction-btn");
+const transactionSection = document.querySelector(".transactions-section");
+const closeBtn = document.getElementById("close-btn");
 
 let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
@@ -112,11 +116,6 @@ function formatCurrency(number) {
 updateTransactions();
 updateBalance();
 updateSummary();
-
-//toggling transaction button
-const transactionBtn = document.querySelector(".transaction-btn");
-const transactionSection = document.querySelector(".transactions-section");
-const closeBtn = document.getElementById("close-btn");
 
 transactionBtn.addEventListener("click", () => {
   transactionSection.classList.add("show");
