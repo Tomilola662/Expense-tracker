@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leemo</title>
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="css files/mobile.css" />
+    <link rel="stylesheet" href="css files/main.css" />
+    <link rel="stylesheet" href="css files/index.css" />
+    <link rel="stylesheet" href="css files/about.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,31 +19,48 @@
     <header>
       <h2 class="logo"><a href="index.html">LEEMO</a></h2>
 
-      <nav>
+      <nav id="navbar">
+        <button class="close-button">
+          <img src="images/X Logo Icon.png" alt="" height="40px" width="40px" />
+        </button>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="main.html">Expense Tracker</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
+      <button class="menu-btn">
+        <img
+          src="images/menu.png"
+          alt="menu"
+          class="menu-icon"
+          width="30px"
+          height="30px"
+        />
+      </button>
     </header>
     <h1>About us</h1>
-    <div class="main-section">
+    <div class="main-sectionA">
       <div class="img-container"><img src="images/pic.jpg" alt="" /></div>
       <div class="text-container">
         <p>
-          Hi, I’m Yetunde Babatunde, an aspiring Web Developer passionate about
-          building clean, responsive, and user-friendly websites. I’m currently
-          learning the foundations of HTML, CSS, and JavaScript, and this is my
-          very first mini project to showcase my journey into web development. I
-          enjoy solving problems, turning ideas into interactive designs, and
-          constantly learning new technologies. My goal is to keep improving my
-          skills and eventually create projects that not only look great but
-          also make a real impact. When I’m not coding, I love exploring new
-          tools, learning from other developers, and experimenting with creative
-          ideas.
+          Hi, I’m <strong>Yetunde Babatunde</strong>, an aspiring
+          <strong>Web Developer</strong>
+          passionate about building clean, responsive, and user-friendly
+          websites. I’m currently learning the foundations of
+          <strong>HTML</strong>, <strong>CSS</strong>, and
+          <strong>JavaScript</strong> , and this is my very first mini project
+          to showcase my journey into web development. I enjoy solving problems,
+          turning ideas into interactive designs, and constantly learning new
+          technologies. My goal is to keep improving my skills and eventually
+          create projects that not only look great but also make a real impact.
+          When I’m not coding, I love exploring new tools, learning from other
+          developers, and experimenting with creative ideas.
         </p>
       </div>
     </div>
+    <script src="js files/index.js"></script>
+    <script src="js files/main.js"></script>
   </body>
 </html>

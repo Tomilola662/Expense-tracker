@@ -17,7 +17,7 @@ header {
   background-color: #211cb4;
   color: azure;
   align-items: center;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 header a {
@@ -36,7 +36,7 @@ nav a {
 }
 
 /* styling the text container */
-.main-section {
+.main-sectionA {
   height: 300px;
   width: 90%;
   margin: 5% auto;
@@ -61,17 +61,38 @@ h1 {
   width: 80%;
   height: 100%;
   border-radius: 20px;
-  border: 5px solid white;
+  border: 5px solid #e3bf0e;
   padding: 10px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
 }
+.text-container p {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+h1 {
+  color: #e3bf0e;
+}
+
+strong {
+  color: #e3bf0e;
+}
+.close-button {
+  display: none;
+}
 
 @media screen and (max-width: 700px) {
-  .main-section {
+  .main-sectionA {
     flex-direction: column;
     gap: 30px;
   }
   .img-container {
     text-align: center;
+  }
+
+  nav .close-button {
+    display: block;
+    background: none;
+    border: none;
   }
 }
