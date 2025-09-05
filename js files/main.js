@@ -8,10 +8,12 @@ const transactionContainer = document.querySelector(".t-boxes");
 const transactionBtn = document.querySelector(".transaction-btn");
 const transactionSection = document.querySelector(".transactions-section");
 const closeBtn = document.getElementById("close-btn");
+const resetBtn = document.querySelector(".reset-button");
 
 let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
-formElement.addEventListener("submit", () => {
+formElement.addEventListener("submit", (e) => {
+  e.preventDefault();
   const descriptionValue = descriptionInput.value;
   const amountValue = Number(amountInput.value);
   const currentTimestamp = new Date().toLocaleString();
@@ -65,13 +67,15 @@ function updateTransactions() {
 
 function updateBalance() {
   const balanceElement = document.getElementById("balance");
+  const startingBalance = Number(localStorage.getItem("startingBalance")) || 0;
 
   const balance = transactions.reduce((acc, item) => {
     if (item.type == "minus") return acc - item.amount;
     return acc + item.amount;
-  }, 0); // 0 is important cause at first entry there is no number to use as acc since there will be only one value
+  }, 0);
 
-  balanceElement.innerText = formatCurrency(balance);
+  const totalBalance = balance + startingBalance;
+  balanceElement.innerText = formatCurrency(totalBalance);
 }
 
 function updateSummary() {
@@ -81,8 +85,10 @@ function updateSummary() {
   const allIncome = transactions.filter(
     (transaction) => transaction.type == "plus"
   );
+  const startingBalance = Number(localStorage.getItem("startingBalance")) || 0;
+
   const totalIncome = allIncome.reduce((acc, item) => acc + item.amount, 0);
-  incomeElement.innerText = formatCurrency(totalIncome);
+  incomeElement.innerText = formatCurrency(totalIncome + startingBalance);
 
   const allExpenses = transactions.filter(
     (transaction) => transaction.type == "minus"
@@ -123,4 +129,19 @@ transactionBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
   transactionSection.classList.remove("show");
+});
+
+resetBtn.addEventListener("click", () => {
+  const confirmReset = confirm(
+    "WARNING: This will clear all your previous transactions"
+  );
+  if (!confirmReset) return;
+  transactions = [];
+  randomAmount = 0;
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+  localStorage.setItem("startingBalance", JSON.stringify(randomAmount));
+
+  updateBalance();
+  updateSummary();
+  updateTransactions();
 });

@@ -1,0 +1,141 @@
+@media screen and (max-width: 700px) {
+  body {
+    height: 100vh;
+  }
+  header {
+    height: 80px;
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .input-section {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 90vh;
+    gap: 15px;
+    height: 100%;
+  }
+  .transactions-section {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    right: -100%;
+    box-shadow: none;
+    border-radius: 0;
+    height: 100vh;
+  }
+  .transaction-btn {
+    display: block;
+  }
+
+  .transactions-section h4 {
+    background: none;
+    color: #211cb4;
+    font-size: 20px;
+  }
+  .transactions-section p,
+  .transactions-section span {
+    font-size: 14px;
+  }
+  #close-btn {
+    display: block;
+    align-self: flex-start;
+  }
+  .show {
+    right: 0;
+    transition: right 0.5s ease-out;
+  }
+
+  .current-balance {
+    order: 1;
+    height: 200px;
+    border-radius: 5px;
+    padding: 5%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .current-balance div {
+    flex-direction: column;
+  }
+
+  .current-balance h3,
+  .current-balance p {
+    font-size: 30px;
+  }
+
+  .bal-ex {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 10px;
+    background: none;
+  }
+  .bal-ex h4 {
+    display: none;
+  }
+  .bal,
+  .expenses {
+    display: flex;
+    height: 50%;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    gap: 10px;
+  }
+
+  .expenses div,
+  .bal div {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font: 600;
+    border-radius: 30px;
+    padding: 2%;
+  }
+
+  .time-box {
+    padding-top: 5px;
+  }
+  .time-box p {
+    font-size: 12px;
+  }
+
+  /* menu hamburger */
+  .menu-btn {
+    display: block;
+    color: white;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+  ul li {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+  }
+  nav {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    height: 80%;
+    z-index: 1000;
+    background: #211cb4;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    padding: 10%;
+  }
+
+  .showNavBar {
+    top: 0;
+    transition: all 0.5s ease-out;
+  }
+  nav .close-button {
+    display: block;
+    background: none;
+    border: none;
+  }
+}

@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Expense Tracker</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css files/main.css" />
+    <link rel="stylesheet" href="css files/mobile.css" />
+    <link rel="stylesheet" href="css files/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,79 +18,57 @@
     <header>
       <h2 class="logo"><a href="index.html">LEEMO</a></h2>
 
-      <nav>
+      <nav id="navbar">
         <ul>
+          <li>
+            <button class="close-button">
+              <img
+                src="images/X Logo Icon.png"
+                alt=""
+                height="40px"
+                width="40px"
+              />
+            </button>
+          </li>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="main.html">Expense Tracker</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
+      <button class="menu-btn">
+        <img
+          src="images/menu.png"
+          alt="menu"
+          class="menu-icon"
+          width="30px"
+          height="30px"
+        />
+      </button>
     </header>
-
-    <!-- main seciton -->
-    <main class="main-section">
-      <div class="transactions-section">
-        <button id="close-btn">
-          <img src="images/X Logo Icon.png" alt="" height="30px" width="30px" />
-        </button>
-        <h4>Transactions</h4>
-        <div class="t-boxes"></div>
-      </div>
-      <!-- inputsection -->
-      <div class="input-section">
-        <div class="current-balance">
-          <div>
-            <h3>Current Balance:</h3>
-            <p id="balance">$00.00</p>
-          </div>
-          <div class="btn-box">
-            <button class="transaction-btn">All Transactions</button>
-          </div>
-        </div>
-        <!-- <div class="entry-section"> -->
-        <div class="entry-input">
-          <h3>New Transaction</h3>
-
-          <form action="" id="transaction-form">
-            <div class="transaction-type">
-              <p>Transaction type</p>
-              <input type="radio" name="money" id="income-radio" required />
-              <label for="income-radio">Income</label>
-              <input type="radio" name="money" id="expenses-radio" required />
-              <label for="expenses-radio">Expenses</label>
-            </div>
-            <label for="">Description</label>
-            <input
-              type="text"
-              placeholder="Add a transaction  description"
-              id="description"
-              required
-            />
-            <label for="">Amount</label>
-            <input
-              type="number"
-              placeholder="Enter Amount"
-              id="amount"
-              required
-            />
-            <button type="submit">Add transaction</button>
-          </form>
-        </div>
-        <!-- balance and expenes -->
-        <div class="bal-ex">
-          <h4>Transaction Summary</h4>
-          <div class="bal">
-            <div class="bal1"><h5>Income</h5></div>
-            <div class="bal2"><p id="income">$00.00</p></div>
-          </div>
-          <div class="expenses">
-            <div class="exp1"><h5>Expenses</h5></div>
-            <div class="exp2"><p id="expenses">$00.00</p></div>
-          </div>
-        </div>
-        <!-- </div> -->
-      </div>
+    <main>
+      <h2>Track your money, Control <br />your future</h2>
     </main>
-    <script src="index.js"></script>
+
+    <!-- contaner section -->
+    <section>
+      <div class="container">
+        <div class="budget-box">
+          <div>
+            <p>
+              Start Tracking your<br />
+              Expenses Now
+            </p>
+          </div>
+          <div>
+            <button class="home-start"><a href="main.html">Start</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- popup -->
+
+    <div><p class="bottom-text">Track. Save. Grow</p></div>
+    <script src="js files/index.js"></script>
   </body>
 </html>
