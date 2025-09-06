@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <script
+      src="https://kit.fontawesome.com/c578b459da.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css files/main.css" />
     <link rel="stylesheet" href="css files/mobile.css" />
     <link rel="stylesheet" href="css files/index.css" />
@@ -19,17 +23,10 @@
       <h2 class="logo"><a href="index.html">LEEMO</a></h2>
 
       <nav id="navbar">
+        <button class="close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         <ul>
-          <li>
-            <button class="close-button">
-              <img
-                src="images/X Logo Icon.png"
-                alt=""
-                height="40px"
-                width="40px"
-              />
-            </button>
-          </li>
           <li><a href="index.html">Home</a></li>
           <li><a href="main.html">Expense Tracker</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -37,38 +34,32 @@
         </ul>
       </nav>
       <button class="menu-btn">
-        <img
-          src="images/menu.png"
-          alt="menu"
-          class="menu-icon"
-          width="30px"
-          height="30px"
-        />
+        <i class="fa-solid fa-bars"></i>
       </button>
     </header>
     <main>
       <h2>Track your money, Control <br />your future</h2>
     </main>
 
-    <!-- contaner section -->
+    <!-- container section -->
     <section>
       <div class="container">
-        <div class="budget-box">
-          <div>
-            <p>
-              Start Tracking your<br />
-              Expenses Now
-            </p>
-          </div>
-          <div>
-            <button class="home-start"><a href="main.html">Start</a></button>
-          </div>
+        <div class="home-text">
+          <p>
+            Start Tracking your<br />
+            Expenses Now
+          </p>
+        </div>
+        <div>
+          <button class="home-start"><a href="main.html">Start</a></button>
         </div>
       </div>
     </section>
-    <!-- popup -->
 
     <div><p class="bottom-text">Track. Save. Grow</p></div>
+    <footer>
+      <p>&copy; 2025 Yetunde Babatunde. All rights reserved.</p>
+    </footer>
     <script src="js files/index.js"></script>
   </body>
 </html>

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
+    <script
+      src="https://kit.fontawesome.com/c578b459da.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css files/popup.css" />
     <link rel="stylesheet" href="css files/main.css" />
     <link rel="stylesheet" href="css files/mobile.css" />
@@ -19,17 +23,10 @@
       <h2 class="logo"><a href="index.html">LEEMO</a></h2>
 
       <nav id="navbar">
+        <button class="close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         <ul>
-          <li>
-            <button class="close-button">
-              <img
-                src="images/X Logo Icon.png"
-                alt=""
-                height="40px"
-                width="40px"
-              />
-            </button>
-          </li>
           <li><a href="index.html">Home</a></li>
           <li><a href="main.html">Expense Tracker</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -38,13 +35,7 @@
         </ul>
       </nav>
       <button class="menu-btn">
-        <img
-          src="images/menu.png"
-          alt="menu"
-          class="menu-icon"
-          width="30px"
-          height="30px"
-        />
+        <i class="fa-solid fa-bars"></i>
       </button>
     </header>
 
@@ -52,7 +43,7 @@
     <main class="main-section">
       <div class="transactions-section">
         <button id="close-btn">
-          <img src="images/X Logo Icon.png" alt="" height="40px" width="40px" />
+          <i class="fa-solid fa-xmark"></i>
         </button>
         <h4>Transactions</h4>
         <div class="t-boxes"></div>
