@@ -144,4 +144,8 @@ resetBtn.addEventListener("click", () => {
   updateBalance();
   updateSummary();
   updateTransactions();
+  // triggering the modal after reset
+  navBar.classList.remove("showNavBar");
+  overlay.style.display = "block";
+  popupContent.style.display = "block";
 });

@@ -49,6 +49,8 @@ overlay.addEventListener("click", () => {
 
 // displaying modal on screen load
 window.addEventListener("load", () => {
+  const startingBalance = Number(localStorage.getItem("startingBalance"));
+  if (startingBalance) return;
   overlay.style.display = "block";
   popupContent.style.display = "block";
 });
