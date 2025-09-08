@@ -13,7 +13,8 @@ header {
   width: 100%;
   height: 70px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 3%;
   /* background-color: blue; */
   background-color: #211cb4;
   color: azure;
@@ -30,6 +31,10 @@ nav ul {
   list-style-type: none;
   display: flex;
   gap: 30px;
+}
+
+li:hover a {
+  color: #facf23;
 }
 nav a {
   text-decoration: none;
@@ -311,6 +316,7 @@ form label {
   background: none;
   border: none;
   display: none;
+  font-size: 30px;
 }
 
 .close-button {

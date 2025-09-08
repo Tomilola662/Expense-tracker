@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
+    <script
+      src="https://kit.fontawesome.com/c578b459da.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css files/popup.css" />
     <link rel="stylesheet" href="css files/main.css" />
     <link rel="stylesheet" href="css files/mobile.css" />
@@ -19,17 +23,10 @@
       <h2 class="logo"><a href="index.html">LEEMO</a></h2>
 
       <nav id="navbar">
+        <button class="close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         <ul>
-          <li>
-            <button class="close-button">
-              <img
-                src="images/X Logo Icon.png"
-                alt=""
-                height="40px"
-                width="40px"
-              />
-            </button>
-          </li>
           <li><a href="index.html">Home</a></li>
           <li><a href="main.html">Expense Tracker</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -38,13 +35,7 @@
         </ul>
       </nav>
       <button class="menu-btn">
-        <img
-          src="images/menu.png"
-          alt="menu"
-          class="menu-icon"
-          width="30px"
-          height="30px"
-        />
+        <i class="fa-solid fa-bars"></i>
       </button>
     </header>
 
@@ -52,7 +43,7 @@
     <main class="main-section">
       <div class="transactions-section">
         <button id="close-btn">
-          <img src="images/X Logo Icon.png" alt="" height="40px" width="40px" />
+          <i class="fa-solid fa-xmark"></i>
         </button>
         <h4>Transactions</h4>
         <div class="t-boxes"></div>
@@ -122,19 +113,29 @@
           height="30px width30px"
         />
         <p>Generate A Random Budget To Get Started</p>
-        <button class="generate-button">Generate</button>
-        <div class="generated-budget"></div>
-        <div class="btn-group">
-          <button class="use-budget">Use Budget</button>
-          <button class="another-budget">Generate Another</button>
+        <div id="gb-container">
+          <button class="generate-button">Generate</button>
         </div>
+        <div class="generated-budget"></div>
+        <div class="btn-group"></div>
         <div class="direct-link">
           <button class="direct-btn">Use Custom Budget</button>
         </div>
       </div>
     </div>
-    <script src="js files/main.js"></script>
+    <!-- reset popup -->
+    <div class="overlay2">
+      <div class="reset-popup">
+        <h2>WARNING</h2>
+        <p>This will clear all your previous transactions</p>
+        <div class="reset-btn">
+          <button id="confirm-reset">Confim</button>
+          <button id="confirm-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
     <script src="js files/popup.js"></script>
     <script src="js files/index.js"></script>
+    <script src="js files/main.js"></script>
   </body>
 </html>

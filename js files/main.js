@@ -132,16 +132,36 @@ closeBtn.addEventListener("click", () => {
 });
 
 resetBtn.addEventListener("click", () => {
-  const confirmReset = confirm(
-    "WARNING: This will clear all your previous transactions"
-  );
-  if (!confirmReset) return;
-  transactions = [];
-  randomAmount = 0;
-  localStorage.setItem("transactions", JSON.stringify(transactions));
-  localStorage.setItem("startingBalance", JSON.stringify(randomAmount));
+  const resetPopup = document.querySelector(".reset-popup");
+  const overlay2 = document.querySelector(".overlay2");
+  const confirmReset = document.getElementById("confirm-reset");
+  const cancelReset = document.getElementById("confirm-cancel");
+  overlay2.style.display = "block";
+  resetPopup.style.display = "block";
+  navBar.classList.remove("showNavBar");
 
-  updateBalance();
-  updateSummary();
-  updateTransactions();
+  confirmReset.addEventListener("click", () => {
+    overlay2.style.display = "none";
+    resetPopup.style.display = "none";
+    transactions = [];
+    randomAmount = 0;
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+    localStorage.setItem("startingBalance", JSON.stringify(randomAmount));
+
+    updateBalance();
+    updateSummary();
+    updateTransactions();
+    // triggering the modal after reset
+    navBar.classList.remove("showNavBar");
+    overlay.style.display = "block";
+    btnGroup.style.display = "none";
+    budget.innerHTML = "";
+    popupContent.style.display = "block";
+    generateButton.style.display = "block";
+  });
+
+  cancelReset.addEventListener("click", () => {
+    overlay2.style.display = "none";
+    resetPopup.style.display = "none";
+  });
 });
