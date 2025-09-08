@@ -14,7 +14,7 @@ generateButton.addEventListener("click", () => {
   randomAmount = Math.floor(Math.random() * (max - min + 1)) + min;
 
   generateButton.style.display = "none";
-  btnGroup.style.display = "block";
+  btnGroup.style.display = "flex";
   btnGroup.innerHTML = `<button class="use-budget" onclick="useBudget()">Use Budget</button>
                       <button class="another-budget" onclick="generateAnother()">Generate Another</button>`;
   budget.innerHTML = `<p class="budget">${formatCurrency(randomAmount)}</p>`;

@@ -34,11 +34,13 @@
 .reset-popup {
   z-index: 1200;
   height: 35%;
+  display: flex;
 }
 .reset-popup > h2 {
   color: #e14343;
   margin-bottom: 5px;
   font-size: 2rem;
+  margin-top: 10%;
 }
 .reset-popup > p {
   color: white;
@@ -171,16 +173,16 @@
     width: 80%;
     height: 30%;
     left: 10%;
-    padding: 15% 10%;
+    padding: 3%;
   }
   .reset-popup > h2 {
     color: red;
     margin-bottom: 5px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .reset-popup > p {
     color: white;
     margin-bottom: 5px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }

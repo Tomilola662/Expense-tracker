@@ -135,14 +135,11 @@ resetBtn.addEventListener("click", () => {
   const resetPopup = document.querySelector(".reset-popup");
   const overlay2 = document.querySelector(".overlay2");
   const confirmReset = document.getElementById("confirm-reset");
+  const cancelReset = document.getElementById("confirm-cancel");
   overlay2.style.display = "block";
   resetPopup.style.display = "block";
   navBar.classList.remove("showNavBar");
 
-  // const confirmReset = confirm(
-  //   "WARNING: This will clear all your previous transactions"
-  // );
-  // if (!confirmReset) return;
   confirmReset.addEventListener("click", () => {
     overlay2.style.display = "none";
     resetPopup.style.display = "none";
@@ -161,5 +158,10 @@ resetBtn.addEventListener("click", () => {
     budget.innerHTML = "";
     popupContent.style.display = "block";
     generateButton.style.display = "block";
+  });
+
+  cancelReset.addEventListener("click", () => {
+    overlay2.style.display = "none";
+    resetPopup.style.display = "none";
   });
 });
