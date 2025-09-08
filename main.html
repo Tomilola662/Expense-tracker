@@ -113,19 +113,29 @@
           height="30px width30px"
         />
         <p>Generate A Random Budget To Get Started</p>
-        <button class="generate-button">Generate</button>
-        <div class="generated-budget"></div>
-        <div class="btn-group">
-          <button class="use-budget">Use Budget</button>
-          <button class="another-budget">Generate Another</button>
+        <div id="gb-container">
+          <button class="generate-button">Generate</button>
         </div>
+        <div class="generated-budget"></div>
+        <div class="btn-group"></div>
         <div class="direct-link">
           <button class="direct-btn">Use Custom Budget</button>
         </div>
       </div>
     </div>
-    <script src="js files/main.js"></script>
+    <!-- reset popup -->
+    <div class="overlay2">
+      <div class="reset-popup">
+        <h2>WARNING</h2>
+        <p>This will clear all your previous transactions</p>
+        <div class="reset-btn">
+          <button id="confirm-reset">Confim</button>
+          <button id="confirm-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
     <script src="js files/popup.js"></script>
     <script src="js files/index.js"></script>
+    <script src="js files/main.js"></script>
   </body>
 </html>

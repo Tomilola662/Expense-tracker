@@ -1,9 +1,10 @@
 /* modal styling */
 
-.overlay {
+.overlay,
+.overlay2 {
   display: none;
   position: fixed;
-  z-index: 9;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -11,8 +12,12 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.6);
 }
+.overlay2 {
+  z-index: 1000;
+}
 
-.popup-content {
+.popup-content,
+.reset-popup {
   padding: 20px;
   border-radius: 8px;
   /* height: 45%; */
@@ -20,19 +25,50 @@
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   background-color: #7d78fc;
-  z-index: 1000;
+  z-index: 15;
   position: fixed;
   left: 30%;
   top: 30%;
   display: none;
 }
-
+.reset-popup {
+  z-index: 1200;
+  height: 35%;
+}
+.reset-popup > h2 {
+  color: #e14343;
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+.reset-popup > p {
+  color: white;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
 .popup-content > p {
   color: white;
   margin-top: 5%;
   font-size: 25px;
 }
-
+.reset-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+.reset-btn button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-right: 10px;
+  cursor: pointer;
+}
+#confirm-reset {
+  background-color: #e14343;
+  color: white;
+}
+#confirm-reset:hover {
+  background-color: #ea5c5c;
+}
 .close-popup {
   color: #8b8a8a;
   float: right;
@@ -56,7 +92,10 @@
   background-color: white;
   padding: 10px 30px;
 }
-
+#gb-container {
+  display: flex;
+  justify-content: center;
+}
 .generate-button {
   padding: 3% 10%;
   border-radius: 10px;
@@ -68,6 +107,7 @@
   letter-spacing: 2px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
   margin-top: 5%;
+  /* text-align: center; */
 }
 
 .generate-button:hover {
@@ -126,5 +166,21 @@
   }
   .btn-group > button {
     flex: 1;
+  }
+  .reset-popup {
+    width: 80%;
+    height: 30%;
+    left: 10%;
+    padding: 15% 10%;
+  }
+  .reset-popup > h2 {
+    color: red;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+  }
+  .reset-popup > p {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
   }
 }

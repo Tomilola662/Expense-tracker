@@ -39,69 +39,51 @@ nav a {
 }
 
 /* /contact */
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
 
 .contact-container {
   width: 90%;
+  height: 50%;
   max-width: 600px;
   margin: 50px auto;
   background: #fff;
-  padding: 20px;
+  padding: 5% 3%;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #211cb4;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
 }
 
 p {
   text-align: center;
   color: #555;
+  font-size: 1.15rem;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input,
-textarea {
+.icon-list {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  height: 30%;
+  display: flex;
+  margin-top: 20px;
 }
 
-form button {
-  display: block;
-  width: 100%;
-  background: #007bff;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+.icon-list div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-form button:hover {
-  background: #0056b3;
+.icon-list i {
+  font-size: 40px;
 }
-
-#responseMsg {
-  margin-top: 15px;
-  text-align: center;
-  font-weight: bold;
+@media screen and (max-width: 700px) {
+  .contact-container {
+    margin-top: 30%;
+    height: 30%;
+  }
 }
